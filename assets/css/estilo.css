@@ -36,6 +36,58 @@ body {
 .margin-top-40 {
     margin-top: 40px;
 }
+/* ========================= */
+/* RESPONSIVO (CELULAR)      */
+/* ========================= */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste do Header: Logo em cima, badge embaixo */
+    .container-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* 2. Menu de Navegação: Quebra em linhas se não couber */
+    .container-navegacao {
+        flex-wrap: wrap; 
+        gap: 10px;
+    }
+
+    /* 3. ARTIGO: Texto e Imagem ficam um embaixo do outro */
+    .artigo {
+        flex-direction: column; /* O "pulo do gato" que te falei */
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .artigo-imagem {
+        max-width: 100%; /* Imagem ocupa a largura total no celular */
+    }
+
+    /* 4. ESTATÍSTICAS: Alinha no centro no mobile */
+    .estatisticas {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* 5. SEÇÃO SOBRE: Os quadros que eram 45% agora ocupam 100% */
+    .container-principal article {
+        width: 90%; /* Ocupa quase a tela toda */
+        margin: 10px 0;
+        display: block; /* Garante que fiquem um abaixo do outro */
+    }
+
+    /* 6. SLIDER: Ajuste básico para não estourar a tela */
+    .slider {
+        width: 100%;
+        height: auto;
+    }
+    .slides, .slide {
+        height: 250px; /* Diminui a altura no celular para não ficar gigante */
+    }
+}
 
 /* ========================= */
 /* HEADER                    */
@@ -105,7 +157,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000
+    z-index: 100;
     /* z-index controla quem fica na frente — 100 garante que o nav fique acima de outros elementos */
     display: flex;
     /* adicionado: substitui o text-align: center, dá controle real sobre o alinhamento */
@@ -338,7 +390,7 @@ body {
     background-color: #fff;
 }
 
-#radio1:checked ~ .first { margin-left: -2%; }
+#radio1:checked ~ .first { margin-left: -5%; }
 #radio2:checked ~ .first { margin-left: -27%; }
 #radio3:checked ~ .first { margin-left: -55%; }
 #radio4:checked ~ .first { margin-left: -77%; }
