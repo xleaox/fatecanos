@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATECANOS</title>
+
+    <!-- Estilos da Página -->
+    <link rel="stylesheet" href="assets/css/estilo.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logofatecanos.png" type="image/png">
+</head>
+
+<body>
+    <header class="container-header">
+        <a class="header-logo" href="index.html">
+            <img src="assets/images/logofatecanos.png" alt="logo fatecanos">
+            <div class="header-texto">
+                <h1>FATECANOS</h1>
+                <p>Da comunidade para a comunidade</p>
+            </div>
+        </a>
+        <nav class="container-navegacao">
+            <a href="index.html" class="ativo">Inicio</a>
+            <a href="fatecanos.html">Fatecanos</a>
+            <a href="comunidade.html">Comunidade</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="artigo">
+
+            <!-- TEXTO À ESQUERDA - vem primeiro no HTML então aparece à esquerda -->
+            <div class="artigo-texto">
+
+                <!-- ESTATÍSTICAS — ficam acima do título -->
+                <div class="estatisticas">
+                    <div class="stat">
+                        <span class="stat-numero">5.000+</span>
+                        <span class="stat-label">Alunos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-numero">60</span>
+                        <span class="stat-label">Unidades</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-numero">300+</span>
+                        <span class="stat-label">Projetos</span>
+                    </div>
+                </div>
+
+                <h1>Conecte-se com alunos de todas as unidades da Fatec</h1>
+                <p>O Fatecanos é a rede de networking dos alunos Fatec.
+                    Encontre colegas de outros cursos e unidades, desenvolva
+                    projetos em equipe e cresça junto com a comunidade.</p>
+
+                <!-- BOTÃO — leva o usuário para a página de comunidade -->
+                <a href="comunidade.html" class="botao-artigo">Fazer parte </a>
+            </div>
+
+            <!-- IMAGEM À DIREITA — vem segundo no HTML então aparece à direita -->
+            <div class="artigo-imagem">
+                <a href="https://discord.gg" target="_blank">
+                    <img src="assets/images/artigo1.png" alt="Entrar no Discord">
+                </a>
+            </div>
+
+        </section>
+
+        <!-- SLIDER WRAPPER — centraliza o slider na página -->
+         
+        <div class="slider-wrapper">
+
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio buttons -->
+                    <input type="radio" name="radio-btn" id="radio1" checked>
+                    <!-- checked = marca esse como selecionado por padrão -->
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <!-- imagens do slide -->
+                    <div class="slide first">
+                        <img src="assets/images/slide1.png" alt="imagem 1">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/slide2.png" alt="imagem 2">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/slide3.png" alt="imagem 3">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/slide4.png" alt="imagem 4">
+                    </div>
+
+                    <!-- Navigation auto -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+
+        </div>
+        <!-- chamada para ação -->
+        <section class="container-servicos-contatos">
+
+            <h1>Faça parte da comunidade Fatecanos</h1>
+
+            <div class="botoes-servicos-contatos">
+                <a href="#">Entrar na comunidade</a>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        Fatecanos.com &copy; 2026 | &reg; Todos os direitos reservados.
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
