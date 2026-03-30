@@ -94,6 +94,11 @@ body {
 /* ========================= */
 
 .container-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     background: radial-gradient(circle at 50% 20%, #000000, #5e0000 70%);
     padding: 25px 40px;
     /* 4 valores: cima, direita, baixo, esquerda — reduzimos cima/baixo para aproximar do nav */
@@ -153,11 +158,6 @@ body {
 /* ========================= */
 
 .container-navegacao {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
     /* z-index controla quem fica na frente — 100 garante que o nav fique acima de outros elementos */
     display: flex;
     /* adicionado: substitui o text-align: center, dá controle real sobre o alinhamento */
@@ -251,7 +251,7 @@ body {
     /* espaço entre o texto e a imagem */
     padding: 60px 80px;
     /* 60px cima/baixo, 80px nas laterais para respirar */
-    background-color: #000000;
+    background-color: rgba(255, 255, 255, 0.9);
     min-height: 500px;
     /* altura mínima para a seção não ficar achatada */
 }
@@ -322,11 +322,11 @@ body {
 .slider-wrapper {
     display: flex;
     justify-content: center;
-    background-color: #ffecec;
+    background-color: #000000;
     padding: 30px 0;
     overflow: hidden;
     /* esconde qualquer coisa que vaze para fora do wrapper */
-    background-image: url('../images/backgroundslider.jpg');
+  
 }
 .slider {
   width: 800px;
@@ -375,7 +375,7 @@ body {
 }
 
 .manual-btn {
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -387,13 +387,13 @@ body {
 }
 
 .manual-btn:hover {
-    background-color: #fff;
+    background-color: #000000;
 }
 
-#radio1:checked ~ .first { margin-left: -5%; }
-#radio2:checked ~ .first { margin-left: -27%; }
-#radio3:checked ~ .first { margin-left: -55%; }
-#radio4:checked ~ .first { margin-left: -77%; }
+#radio1:checked ~ .first { margin-left: 0%; }
+#radio2:checked ~ .first { margin-left: -25%; }
+#radio3:checked ~ .first { margin-left: -50%; }
+#radio4:checked ~ .first { margin-left: -75%; }
 
 .navigation-auto div {
     border: 2px solid #a00000;
@@ -401,6 +401,10 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
+}
+
+.radio-btn-teste {
+    display: none;     /*Ele basicamente fa*/
 }
 
 .navigation-auto {
@@ -415,10 +419,10 @@ body {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1 { background-color: #fff; }
-#radio2:checked ~ .navigation-auto .auto-btn2 { background-color: #fff; }
-#radio3:checked ~ .navigation-auto .auto-btn3 { background-color: #fff; }
-#radio4:checked ~ .navigation-auto .auto-btn4 { background-color: #fff; }
+#radio1:checked ~ .navigation-auto .auto-btn1 { background-color: #ff0000; }
+#radio2:checked ~ .navigation-auto .auto-btn2 { background-color: #ff0000; }
+#radio3:checked ~ .navigation-auto .auto-btn3 { background-color: #ff0000; }
+#radio4:checked ~ .navigation-auto .auto-btn4 { background-color: #ff0000; }
 /* ========================= */
 /* FATECANOS - SEÇÃO SOBRE   */
 /* ========================= */
