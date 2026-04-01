@@ -1,5 +1,5 @@
 /* ========================= */
-/* LUCAS LEÃO                */
+/* LUCAS LEÃO               */
 /* ========================= */
 
 :root {
@@ -15,7 +15,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    
+
     /* var(--cor-1) usa a variável que definimos lá no :root */
 }
 
@@ -35,11 +35,13 @@ body {
 .margin-top-40 {
     margin-top: 40px;
 }
+
 /* ========================= */
 /* RESPONSIVO (CELULAR)      */
 /* ========================= */
 
 @media (max-width: 768px) {
+
     /* 1. Ajuste do Header: Logo em cima, badge embaixo */
     .container-header {
         flex-direction: column;
@@ -50,20 +52,22 @@ body {
 
     /* 2. Menu de Navegação: Quebra em linhas se não couber */
     .container-navegacao {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         gap: 10px;
     }
 
     /* 3. ARTIGO: Texto e Imagem ficam um embaixo do outro */
     .artigo {
-        
-        flex-direction: column; /* O "pulo do gato" que te falei */
+
+        flex-direction: column;
+        /* O "pulo do gato" que te falei */
         padding: 30px 20px;
         text-align: center;
     }
 
     .artigo-imagem {
-        max-width: 100%; /* Imagem ocupa a largura total no celular */
+        max-width: 100%;
+        /* Imagem ocupa a largura total no celular */
     }
 
     /* 4. ESTATÍSTICAS: Alinha no centro no mobile */
@@ -74,9 +78,11 @@ body {
 
     /* 5. SEÇÃO SOBRE: Os quadros que eram 45% agora ocupam 100% */
     .container-principal article {
-        width: 90%; /* Ocupa quase a tela toda */
+        width: 90%;
+        /* Ocupa quase a tela toda */
         margin: 10px 0;
-        display: block; /* Garante que fiquem um abaixo do outro */
+        display: block;
+        /* Garante que fiquem um abaixo do outro */
     }
 
     /* 6. SLIDER: Ajuste básico para não estourar a tela */
@@ -84,8 +90,11 @@ body {
         width: 100%;
         height: auto;
     }
-    .slides, .slide {
-        height: 250px; /* Diminui a altura no celular para não ficar gigante */
+
+    .slides,
+    .slide {
+        height: 250px;
+        /* Diminui a altura no celular para não ficar gigante */
     }
 }
 
@@ -165,7 +174,7 @@ body {
     align-items: center;
     gap: 8px;
     /* gap = espaço entre os links, substitui o margin nos <a> */
-    padding: 16px 24px;
+    padding: 1px 24px;
     /* filter: blur removido — estava deixando o texto levemente borrado */
 }
 
@@ -215,6 +224,7 @@ body {
     transform: scaleX(1);
     /* linha já aparece sem precisar de hover */
 }
+
 /* ========================= */
 /* FATECANOS - ARTIGO 01     */
 /* ========================= */
@@ -223,25 +233,31 @@ body {
 /* ESTASTISTICAS */
 
 .estatisticas {
-    display: flex; /*Aqui ele simplesmente alinho oq tava dentro da class*/
-    gap: 32px; /*espaço*/
+    display: flex;
+    /*Aqui ele simplesmente alinho oq tava dentro da class*/
+    gap: 32px;
+    /*espaço*/
     margin-bottom: 32px;
 }
+
 .stat {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     /* empilha o numero e a label verticalmente q ta dentro do stat*/
     gap: 4px;
 }
+
 .stat-numero {
     font-family: sans-serif;
     font-size: 32px;
     font-weight: 700;
 }
+
 .stat-label {
     font-size: 20px;
-    color:rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55);
 }
+
 .artigo {
     display: flex;
     /* ativa o flexbox — coloca os filhos lado a lado */
@@ -251,7 +267,7 @@ body {
     /* espaço entre o texto e a imagem */
     padding: 60px 80px;
     /* 60px cima/baixo, 80px nas laterais para respirar */
-    
+
     min-height: 500px;
     /* altura mínima para a seção não ficar achatada */
 }
@@ -313,9 +329,15 @@ body {
     border-color: #8B0000;
     border-style: solid;
 }
+
 .artigo-imagem img:hover {
     color: #5e0000;
 }
+
+
+
+
+
 
 /* ========================= */
 /* FATECANOS - SLIDER        */
@@ -324,14 +346,15 @@ body {
 .slider-wrapper {
     display: flex;
     justify-content: center;
-    background-color:#0D0D0D;
+    background-color: #000000;
     padding: 30px 0;
     overflow: hidden;
     /* esconde qualquer coisa que vaze para fora do wrapper */
-  
+
 }
+
 .slider {
-  width: 800px;
+    width: 800px;
     height: 400px;
     overflow: hidden;
     position: relative;
@@ -357,7 +380,8 @@ body {
     position: relative;
     flex-shrink: 0;
     /* impede o slide de encolher — esse era o problema do corte */
-    transition: 0.6s ease-in-out; /* ADICIONE ESTA LINHA: define a suavidade e o tempo */
+    transition: 0.6s ease-in-out;
+    /* ADICIONE ESTA LINHA: define a suavidade e o tempo */
 }
 
 .slide img {
@@ -365,7 +389,8 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    margin-left: 0; /* garante que a imagem começa do zero */
+    margin-left: 0;
+    /* garante que a imagem começa do zero */
 }
 
 .manual-navigation {
@@ -392,10 +417,21 @@ body {
     background-color: #000000;
 }
 
-#radio1:checked ~ .first { margin-left: 0%; }
-#radio2:checked ~ .first { margin-left: -25%; }
-#radio3:checked ~ .first { margin-left: -50%; }
-#radio4:checked ~ .first { margin-left: -75%; }
+#radio1:checked~.first {
+    margin-left: 0%;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    margin-left: -75%;
+}
 
 .navigation-auto div {
     border: 2px solid #a00000;
@@ -406,7 +442,8 @@ body {
 }
 
 .radio-btn-teste {
-    display: none;     /*Ele basicamente fa*/
+    display: none;
+    /*Ele basicamente fa*/
 }
 
 .navigation-auto {
@@ -421,10 +458,22 @@ body {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1 { background-color: #ff0000; }
-#radio2:checked ~ .navigation-auto .auto-btn2 { background-color: #ff0000; }
-#radio3:checked ~ .navigation-auto .auto-btn3 { background-color: #ff0000; }
-#radio4:checked ~ .navigation-auto .auto-btn4 { background-color: #ff0000; }
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #ff0000;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #ff0000;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #ff0000;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #ff0000;
+}
+
 /* ========================= */
 /* FATECANOS - SEÇÃO SOBRE   */
 /* ========================= */
@@ -526,7 +575,7 @@ footer {
     display: flex;
     gap: 4px;
     text-align: center;
-    justify-content:center;
+    justify-content: center;
     padding: 30px;
     background-color: #000000;
     color: gray;
