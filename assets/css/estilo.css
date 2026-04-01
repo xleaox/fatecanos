@@ -4,7 +4,6 @@
 
 :root {
     --font-default: Arial, Helvetica, sans-serif;
-    --cor-1: #fff;
     /* :root é onde ficam as variáveis globais do site — valores que você reutiliza em vários lugares */
 }
 
@@ -16,7 +15,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--cor-1);
+    
     /* var(--cor-1) usa a variável que definimos lá no :root */
 }
 
@@ -25,7 +24,7 @@ body {
 .main {
     min-height: 85vh;
     /* vh = viewport height — 85vh significa 85% da altura da tela visível */
-    background-color: #ffffff;
+    background: linear-gradient(to bottom, #f5f5f5, #1a0000);
 }
 
 /*  GERAL */
@@ -57,6 +56,7 @@ body {
 
     /* 3. ARTIGO: Texto e Imagem ficam um embaixo do outro */
     .artigo {
+        
         flex-direction: column; /* O "pulo do gato" que te falei */
         padding: 30px 20px;
         text-align: center;
@@ -99,7 +99,7 @@ body {
     left: 0;
     right: 0;
     z-index: 100;
-    background: radial-gradient(circle at 50% 20%, #000000, #5e0000 70%);
+    background-color: #0D0D0D;
     padding: 25px 40px;
     /* 4 valores: cima, direita, baixo, esquerda — reduzimos cima/baixo para aproximar do nav */
     display: flex;
@@ -158,7 +158,7 @@ body {
 /* ========================= */
 
 .container-navegacao {
-    /* z-index controla quem fica na frente — 100 garante que o nav fique acima de outros elementos */
+    /* z-index controla quem fica na frente  100 garante que o nav fique acima de outros elementos */
     display: flex;
     /* adicionado: substitui o text-align: center, dá controle real sobre o alinhamento */
     justify-content: center;
@@ -170,7 +170,7 @@ body {
 }
 
 .container-navegacao a {
-    font-size: 1em;
+    font-size: 1.3em;
     /* reduzido de 1.5em — em telas menores 1.5em ficava muito grande */
     padding: 6px 14px;
     text-decoration: none;
@@ -189,7 +189,7 @@ body {
     left: 14px;
     right: 14px;
     height: 2px;
-    background: #ff4444;
+    background: #920000;
     border-radius: 2px;
     transform: scaleX(0);
     /* começa invisível — escala horizontal zerada */
@@ -239,8 +239,8 @@ body {
     font-weight: 700;
 }
 .stat-label {
-    font-size: 13px;
-    color:rgba(255, 255, 255, 0.55);
+    font-size: 20px;
+    color:rgba(0, 0, 0, 0.55);
 }
 .artigo {
     display: flex;
@@ -251,32 +251,31 @@ body {
     /* espaço entre o texto e a imagem */
     padding: 60px 80px;
     /* 60px cima/baixo, 80px nas laterais para respirar */
-    background-color: rgba(255, 255, 255, 0.9);
+    
     min-height: 500px;
     /* altura mínima para a seção não ficar achatada */
 }
 
 .artigo-texto {
     flex: 1;
-    /* ocupa metade do espaço — divide igualmente com a imagem */
-    color: #ffffff;
+    /* ocupa metade do espaç divide igualmente com a imagem */
+    color: #6f0000;
 }
 
 .artigo-texto h1 {
-    font-size: 36px;
+    font-size: 56px;
     /* título grande e impactante */
     line-height: 1.3;
     /* espaço entre as linhas do título */
     margin-bottom: 16px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .artigo-texto p {
     font-size: 15px;
     line-height: 1.7;
     /* line-height = espaço entre as linhas — 1.7 deixa o texto mais legível */
-    color: rgba(255, 255, 255, 0.7);
-    /* branco com 70% de opacidade — mais suave que branco puro */
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .botao-artigo {
@@ -285,7 +284,7 @@ body {
     margin-top: 24px;
     padding: 12px 28px;
     background: #8B0000;
-    color: white;
+    color: rgba(255, 255, 255, 0.685);
     text-decoration: none;
     border-radius: 8px;
     transition: background 0.3s;
@@ -314,6 +313,9 @@ body {
     border-color: #8B0000;
     border-style: solid;
 }
+.artigo-imagem img:hover {
+    color: #5e0000;
+}
 
 /* ========================= */
 /* FATECANOS - SLIDER        */
@@ -322,7 +324,7 @@ body {
 .slider-wrapper {
     display: flex;
     justify-content: center;
-    background-color: #000000;
+    background-color:#0D0D0D;
     padding: 30px 0;
     overflow: hidden;
     /* esconde qualquer coisa que vaze para fora do wrapper */
@@ -427,19 +429,24 @@ body {
 /* FATECANOS - SEÇÃO SOBRE   */
 /* ========================= */
 
+.text-center h1 {
+    color: var(--cor-1);
+}
+
 .container-principal {
-    background-color: #2d0000;
+    background-color: var(--cor-1);
     padding: 60px 20px;
     text-align: center;
 }
 
 .container-principal h1 {
-    color: white;
+    color: rgb(47, 0, 0);
     margin-bottom: 40px;
+    font-weight: 700;
 }
 
 .container-principal article {
-    background-color: #000000;
+    background-color: #ffffff;
     width: 45%;
     padding: 40px;
     border-radius: 10px;
@@ -451,13 +458,15 @@ body {
 }
 
 .container-principal h3 {
-    color: #ff0000;
+    color: #000000;
     margin-bottom: 15px;
 }
 
 .container-principal ul,
 .container-principal ol {
-    color: #ff0000;
+    display: flex;
+    gap: 20px;
+    color: #5a5a5a;
     padding-left: 20px;
 }
 
@@ -471,6 +480,8 @@ body {
 
 .container-servicos-contatos {
     background-color: #000000;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 60px 20px;
 }
@@ -512,7 +523,10 @@ body {
 /* ========================= */
 
 footer {
+    display: flex;
+    gap: 4px;
     text-align: center;
+    justify-content:center;
     padding: 30px;
     background-color: #000000;
     color: gray;
