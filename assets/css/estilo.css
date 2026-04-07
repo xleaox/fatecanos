@@ -1,5 +1,5 @@
 /* ========================= */
-/* LUCAS LEÃO               */
+/* LUCAS LEÃO                */
 /* ========================= */
 
 :root {
@@ -15,21 +15,22 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
+    
     /* var(--cor-1) usa a variável que definimos lá no :root */
 }
 
 @media (max-width: 768px) {}
 
 .main {
-    min-height: 85vh;
+    min-height: auto;
     /* vh = viewport height — 85vh significa 85% da altura da tela visível */
-    background: linear-gradient(to bottom, #f5f5f5, #1a0000);
+    background-color: #fcfcfc;
 }
 
 /*  GERAL */
 .text-center {
     text-align: center;
+    color: #2b2b2b;
 }
 
 .margin-top-40 {
@@ -37,227 +38,36 @@ body {
 }
 
 /* ========================= */
-/* RESPONSIVO (CELULAR)      */
+/* RESPONSIVO -> MOVIDO      */
 /* ========================= */
-
-@media (max-width: 768px) {
-
-    /* 1. Ajuste do Header: Logo em cima, badge embaixo */
-    .container-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 20px;
-    }
-
-    /* 2. Menu de Navegação: Quebra em linhas se não couber */
-    .container-navegacao {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    /* 3. ARTIGO: Texto e Imagem ficam um embaixo do outro */
-    .artigo {
-
-        flex-direction: column;
-        /* O "pulo do gato" que te falei */
-        padding: 30px 20px;
-        text-align: center;
-    }
-
-    .artigo-imagem {
-        max-width: 100%;
-        /* Imagem ocupa a largura total no celular */
-    }
-
-    /* 4. ESTATÍSTICAS: Alinha no centro no mobile */
-    .estatisticas {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    /* 5. SEÇÃO SOBRE: Os quadros que eram 45% agora ocupam 100% */
-    .container-principal article {
-        width: 90%;
-        /* Ocupa quase a tela toda */
-        margin: 10px 0;
-        display: block;
-        /* Garante que fiquem um abaixo do outro */
-    }
-
-    /* 6. SLIDER: Ajuste básico para não estourar a tela */
-    .slider {
-        width: 100%;
-        height: auto;
-    }
-
-    .slides,
-    .slide {
-        height: 250px;
-        /* Diminui a altura no celular para não ficar gigante */
-    }
-}
-
+/* HEADER  -> MOVIDO         */
 /* ========================= */
-/* HEADER                    */
+/* NAVEGAÇÃO  ->  MOVIDO     */
 /* ========================= */
-
-.container-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: #0D0D0D;
-    padding: 25px 40px;
-    /* 4 valores: cima, direita, baixo, esquerda — reduzimos cima/baixo para aproximar do nav */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* space-between empurra o primeiro filho pra esquerda e o último pra direita */
-}
-
-/* LOGO (imagem + texto juntos, clicáveis) */
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    text-decoration: none;
-    /* remove o sublinhado padrão do link */
-    color: inherit;
-    /* inherit = herda a cor do pai — evita que o subtítulo fique azul de link */
-}
-
-/* IMAGEM DA LOGO */
-.header-logo img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    /* contain garante que a imagem caiba no tamanho sem distorcer */
-}
-
-.header-texto h1 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 2px;
-    /* letter-spacing = espaço entre as letras */
-}
-
-.header-texto p {
-    margin: 2px 0 0;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.55);
-    /* rgba: vermelho, verde, azul, opacidade — 0.55 = 55% visível */
-}
-
-/* BADGE (fatecanos.com) */
-.header-badge {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.45);
-    border: 0.5px solid rgba(255, 255, 255, 0.2);
-    padding: 4px 10px;
-    border-radius: 20px;
-    /* valor alto = bordas bem arredondadas, formato de pílula */
-}
-
-/* ========================= */
-/* NAVEGAÇÃO                 */
-/* ========================= */
-
-.container-navegacao {
-    /* z-index controla quem fica na frente  100 garante que o nav fique acima de outros elementos */
-    display: flex;
-    /* adicionado: substitui o text-align: center, dá controle real sobre o alinhamento */
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    /* gap = espaço entre os links, substitui o margin nos <a> */
-    padding: 1px 24px;
-    /* filter: blur removido — estava deixando o texto levemente borrado */
-}
-
-.container-navegacao a {
-    font-size: 1.3em;
-    /* reduzido de 1.5em — em telas menores 1.5em ficava muito grande */
-    padding: 6px 14px;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.75);
-    position: relative;
-    /* OBRIGATÓRIO para o ::after funcionar — o filho absolute se posiciona em relação ao pai relative */
-    transition: color 0.25s ease;
-    /* transition suaviza a mudança de cor no hover em 0.25 segundos */
-}
-
-.container-navegacao a::after {
-    content: '';
-    /* obrigatório para o ::after existir — mesmo vazio */
-    position: absolute;
-    bottom: 0;
-    left: 14px;
-    right: 14px;
-    height: 2px;
-    background: #920000;
-    border-radius: 2px;
-    transform: scaleX(0);
-    /* começa invisível — escala horizontal zerada */
-    transition: transform 0.25s ease;
-}
-
-/* O hover define o que acontece quando o mouse passa por cima */
-.container-navegacao a:hover {
-    color: #ffffff;
-}
-
-.container-navegacao a:hover::after {
-    transform: scaleX(1);
-    /* expande para o tamanho normal — cria o efeito de linha crescendo */
-}
-
-.container-navegacao a.ativo {
-    color: #ffffff;
-    /* página atual fica com cor cheia */
-}
-
-.container-navegacao a.ativo::after {
-    transform: scaleX(1);
-    /* linha já aparece sem precisar de hover */
-}
-
-/* ========================= */
-/* FATECANOS - ARTIGO 01     */
-/* ========================= */
-
 
 /* ESTASTISTICAS */
 
 .estatisticas {
-    display: flex;
-    /*Aqui ele simplesmente alinho oq tava dentro da class*/
-    gap: 32px;
-    /*espaço*/
+    display: flex; /*Aqui ele simplesmente alinho oq tava dentro da class*/
+    gap: 32px; /*espaço*/
     margin-bottom: 32px;
+    position: relative;
 }
-
 .stat {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     /* empilha o numero e a label verticalmente q ta dentro do stat*/
     gap: 4px;
 }
-
 .stat-numero {
     font-family: sans-serif;
     font-size: 32px;
     font-weight: 700;
 }
-
 .stat-label {
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.55);
+    color:rgba(0, 0, 0, 0.55);
 }
-
 .artigo {
     display: flex;
     /* ativa o flexbox — coloca os filhos lado a lado */
@@ -267,7 +77,7 @@ body {
     /* espaço entre o texto e a imagem */
     padding: 60px 80px;
     /* 60px cima/baixo, 80px nas laterais para respirar */
-
+    
     min-height: 500px;
     /* altura mínima para a seção não ficar achatada */
 }
@@ -329,15 +139,9 @@ body {
     border-color: #8B0000;
     border-style: solid;
 }
-
 .artigo-imagem img:hover {
     color: #5e0000;
 }
-
-
-
-
-
 
 /* ========================= */
 /* FATECANOS - SLIDER        */
@@ -346,15 +150,14 @@ body {
 .slider-wrapper {
     display: flex;
     justify-content: center;
-    background-color: #000000;
+    background-color:#0D0D0D;
     padding: 30px 0;
     overflow: hidden;
     /* esconde qualquer coisa que vaze para fora do wrapper */
-
+  
 }
-
 .slider {
-    width: 800px;
+  width: 800px;
     height: 400px;
     overflow: hidden;
     position: relative;
@@ -380,8 +183,7 @@ body {
     position: relative;
     flex-shrink: 0;
     /* impede o slide de encolher — esse era o problema do corte */
-    transition: 0.6s ease-in-out;
-    /* ADICIONE ESTA LINHA: define a suavidade e o tempo */
+    transition: 0.6s ease-in-out; /* ADICIONE ESTA LINHA: define a suavidade e o tempo */
 }
 
 .slide img {
@@ -389,8 +191,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    margin-left: 0;
-    /* garante que a imagem começa do zero */
+    margin-left: 0; /* garante que a imagem começa do zero */
 }
 
 .manual-navigation {
@@ -417,21 +218,10 @@ body {
     background-color: #000000;
 }
 
-#radio1:checked~.first {
-    margin-left: 0%;
-}
-
-#radio2:checked~.first {
-    margin-left: -25%;
-}
-
-#radio3:checked~.first {
-    margin-left: -50%;
-}
-
-#radio4:checked~.first {
-    margin-left: -75%;
-}
+#radio1:checked ~ .first { margin-left: 0%; }
+#radio2:checked ~ .first { margin-left: -25%; }
+#radio3:checked ~ .first { margin-left: -50%; }
+#radio4:checked ~ .first { margin-left: -75%; }
 
 .navigation-auto div {
     border: 2px solid #a00000;
@@ -442,8 +232,7 @@ body {
 }
 
 .radio-btn-teste {
-    display: none;
-    /*Ele basicamente fa*/
+    display: none;     /*Ele basicamente fa*/
 }
 
 .navigation-auto {
@@ -458,100 +247,118 @@ body {
     margin-right: 40px;
 }
 
-#radio1:checked~.navigation-auto .auto-btn1 {
-    background-color: #ff0000;
-}
-
-#radio2:checked~.navigation-auto .auto-btn2 {
-    background-color: #ff0000;
-}
-
-#radio3:checked~.navigation-auto .auto-btn3 {
-    background-color: #ff0000;
-}
-
-#radio4:checked~.navigation-auto .auto-btn4 {
-    background-color: #ff0000;
-}
-
+#radio1:checked ~ .navigation-auto .auto-btn1 { background-color: #ff0000; }
+#radio2:checked ~ .navigation-auto .auto-btn2 { background-color: #ff0000; }
+#radio3:checked ~ .navigation-auto .auto-btn3 { background-color: #ff0000; }
+#radio4:checked ~ .navigation-auto .auto-btn4 { background-color: #ff0000; }
 /* ========================= */
-/* FATECANOS - SEÇÃO SOBRE   */
+/* FATECANOS - HERO   */
 /* ========================= */
 
-.text-center h1 {
-    color: var(--cor-1);
+.hero-fatecanos {
+    background-color: #fafafa;
+    padding: 36px;
 }
 
-.container-principal {
-    background-color: var(--cor-1);
-    padding: 60px 20px;
+.artigo-fatecanos h1{
+    color: #0D0D0D;
+    padding: 10px;
     text-align: center;
 }
 
-.container-principal h1 {
-    color: rgb(47, 0, 0);
-    margin-bottom: 40px;
-    font-weight: 700;
+.artigo-fatecanos {
+    max-width: 600px;
+    margin: auto;
 }
 
-.container-principal article {
-    background-color: #ffffff;
-    width: 45%;
-    padding: 40px;
-    border-radius: 10px;
-    margin: 20px;
-    display: inline-block;
-    /* inline-block permite definir largura mas ainda fica lado a lado */
-    vertical-align: top;
-    text-align: left;
+.artigo-fatecanos p{
+    color: #ffffff;
+    text-align: center;
+    background-color: #5e0000;
+    border-radius: 26px;
+    padding: 16px;
+    
 }
-
-.container-principal h3 {
-    color: #000000;
-    margin-bottom: 15px;
-}
-
-.container-principal ul,
-.container-principal ol {
+.lista-fatecanos ul {
     display: flex;
-    gap: 20px;
-    color: #5a5a5a;
-    padding-left: 20px;
-}
-
-.container-principal li {
-    margin-bottom: 10px;
-}
-
-/* ========================= */
-/* SEÇÃO FINAL (CTA)         */
-/* ========================= */
-
-.container-servicos-contatos {
-    background-color: #000000;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
+    gap: 20px;
 }
-
-.container-servicos-contatos h1 {
-    color: white;
-    margin-bottom: 20px;
+.lista-fatecanos li {
+    color: #0D0D0D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
-
-.botoes-servicos-contatos a {
+.botao-fatecanos a {
+     background-color: #5e0000;
+    padding: 12px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    display: inline-block;
+}
+.botao-fatecanos a {
     background: #8B0000;
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
     text-decoration: none;
     display: inline-block;
+    text-shadow: #000000;
 }
-
-.botoes-servicos-contatos a:hover {
+.botao-fatecanos a:hover {
     background: #a00000;
     transition: 0.3s;
+}
+.botao-fatecanos h1{
+    text-align: center;
+    font-weight:900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ========================= */
+/* SEÇÃO FINAL (CTA)         */
+/* ========================= */
+
+.container-principal-fatecanos {
+    text-align: center;
+}
+
+.botao-fatecanos a{
+    background-color: #5e0000;
+    padding: 15px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoes-principal-fatecanos a {
+    background: #a50000;
+    color: white;
+    padding: 22px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: #000000;
+    text-align: center;
+    
+}
+.botoes-principal-fatecanos {
+    display: flex;
+    justify-content: center;  /* centraliza horizontalmente */
+    align-items: center;
+    width: 100%;
+}
+
+.botoes-principal-fatecanos a:hover {
+    background: #a00000;
+    transition: 0.3s;
+}
+.projetos p{
+    padding: 10px;
 }
 
 /* ========================= */
@@ -559,8 +366,6 @@ body {
 /* ========================= */
 
 @media (max-width: 768px) {
-    /* tudo dentro daqui só é aplicado quando a tela tiver até 768px de largura */
-
     .container-servicos article {
         width: 100%;
         margin: 10px 0;
@@ -575,7 +380,7 @@ footer {
     display: flex;
     gap: 4px;
     text-align: center;
-    justify-content: center;
+    justify-content:center;
     padding: 30px;
     background-color: #000000;
     color: gray;

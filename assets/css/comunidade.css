@@ -7,8 +7,8 @@
 
 :root {
     --font-default: Arial, Helvetica, sans-serif;
-    --cor-1: #e5e5e5;
-    --background: radial-gradient(circle at 50% 20%, #000000, #5e0000 70%);
+    --cor-1: #0f0000;
+    --background: radial-gradient(circle at 50% 20%, #ffffff, #ffffff 70%);
     /* :root é onde ficam as variáveis globais do site — valores que você reutiliza em vários lugares */
 }
 

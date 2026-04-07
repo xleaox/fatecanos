@@ -1,0 +1,100 @@
+/* CARDS */
+* {
+    margin: 0;
+    padding: 0;
+    /* o * seleciona TODOS os elementos — isso zera as margens e paddings padrão do navegador */
+}
+
+/* ========================= */
+/* CARDS INDEX    */
+/* ========================= */
+
+
+.cards-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #0D0D0D;
+    gap: 32px;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.container-cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-family: "Arial";
+    padding: 30px 0;
+    height: 100%;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    width: 210px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px #00000031;
+    transition: all .3s ease;
+
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    height: 50%;
+}
+.card span{
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.card h2 {
+    font-size: .9rem;
+    color:#5e0000;
+    padding: 2px;
+    text-align: center;
+   
+}
+
+.card a{
+  display: inline-block;
+    /* inline-block permite definir padding mas fica na mesma linha */
+    margin-top: 4px;
+    padding: 12px 28px;
+    background: #8B0000;
+    color: rgba(255, 255, 255, 0.685);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 1s ease;
+    /* transition suaviza a mudança de cor no hover */
+}
+
+.card a:hover {
+    background-color: #ffffff;
+    color: rgb(57, 0, 0);
+    transform: scale(1.2);
+}
+.card:hover {
+    color: #db0000;
+    transform: scale(1.1);
+    border-radius: 12px;
+    box-shadow: 2px 6px 4px #0000005e;
+}

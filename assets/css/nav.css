@@ -1,0 +1,177 @@
+/* NAV E HEADER */
+* {
+    margin: 0;
+    padding: 0;
+    /* o * seleciona TODOS os elementos — isso zera as margens e paddings padrão do navegador */
+}
+container-navegacao {
+    /* z-index controla quem fica na frente  100 garante que o nav fique acima de outros elementos */
+    display: flex;
+    /* adicionado: substitui o text-align: center, dá controle real sobre o alinhamento */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* gap = espaço entre os links, substitui o margin nos <a> */
+    padding: 16px 24px;
+    /* filter: blur removido — estava deixando o texto levemente borrado */
+}
+
+.container-navegacao a {
+    font-size: 1.3em;
+    /* reduzido de 1.5em — em telas menores 1.5em ficava muito grande */
+    padding: 6px 14px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    position: relative;
+    /* OBRIGATÓRIO para o ::after funcionar — o filho absolute se posiciona em relação ao pai relative */
+    transition: color 0.25s ease;
+    /* transition suaviza a mudança de cor no hover em 0.25 segundos */
+}
+
+.container-navegacao a::after {
+    content: '';
+    /* obrigatório para o ::after existir — mesmo vazio */
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background: #920000;
+    border-radius: 2px;
+    transform: scaleX(0);
+    /* começa invisível — escala horizontal zerada */
+    transition: transform 0.25s ease;
+}
+
+/* O hover define o que acontece quando o mouse passa por cima */
+.container-navegacao a:hover {
+    color: #ffffff;
+}
+
+.container-navegacao a:hover::after {
+    transform: scaleX(1);
+    /* expande para o tamanho normal — cria o efeito de linha crescendo */
+}
+
+.container-navegacao a.ativo {
+    color: #ffffff;
+    /* página atual fica com cor cheia */
+}
+
+.container-navegacao a.ativo::after {
+    transform: scaleX(1);
+    /* linha já aparece sem precisar de hover */
+}
+
+/*  Header ---------------------------------------------------------------------------------------------- */
+
+.container-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #0D0D0D;
+    padding: 25px 40px;
+    /* 4 valores: cima, direita, baixo, esquerda — reduzimos cima/baixo para aproximar do nav */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* space-between empurra o primeiro filho pra esquerda e o último pra direita */
+}
+
+/* LOGO (imagem + texto juntos, clicáveis) */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    /* remove o sublinhado padrão do link */
+    color: inherit;
+    /* inherit = herda a cor do pai — evita que o subtítulo fique azul de link */
+}
+
+/* IMAGEM DA LOGO */
+.header-logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    /* contain garante que a imagem caiba no tamanho sem distorcer */
+}
+
+.header-texto h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    /* letter-spacing = espaço entre as letras */
+}
+
+.header-texto p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    /* rgba: vermelho, verde, azul, opacidade — 0.55 = 55% visível */
+}
+
+/* BADGE (fatecanos.com) */
+.header-badge {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 20px;
+    /* valor alto = bordas bem arredondadas, formato de pílula */
+}
+/* RESPONSIVO --------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste do Header: Logo em cima, badge embaixo */
+    .container-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* 2. Menu de Navegação: Quebra em linhas se não couber */
+    .container-navegacao {
+        flex-wrap: wrap; 
+        gap: 10px;
+    }
+
+    /* 3. ARTIGO: Texto e Imagem ficam um embaixo do outro */
+    .artigo {
+        
+        flex-direction: column; /* O "pulo do gato" que te falei */
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .artigo-imagem {
+        max-width: 100%; /* Imagem ocupa a largura total no celular */
+    }
+
+    /* 4. ESTATÍSTICAS: Alinha no centro no mobile */
+    .estatisticas {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* 5. SEÇÃO SOBRE: Os quadros que eram 45% agora ocupam 100% */
+    .container-principal article {
+        width: 90%; /* Ocupa quase a tela toda */
+        margin: 10px 0;
+        display: block; /* Garante que fiquem um abaixo do outro */
+    }
+
+    /* 6. SLIDER: Ajuste básico para não estourar a tela */
+    .slider {
+        width: 100%;
+        height: auto;
+    }
+    .slides, .slide {
+        height: 250px; /* Diminui a altura no celular para não ficar gigante */
+    }
+}
