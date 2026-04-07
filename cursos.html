@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATECANOS - Cursos</title>
+
+    <!-- Estilos da Página -->
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/comunidade.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logofatecanos.png" type="image/png">
+
+    <style>
+        .main-cursos {
+            background-color: #fcfcfc;
+            min-height: 80vh;
+        }
+
+        .hero-cursos {
+            background-color: #0D0D0D;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .hero-cursos h1 {
+            color: #ffffff;
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .hero-cursos p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container-cursos {
+            padding: 60px 80px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .area-titulo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #8B0000;
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #8B0000;
+        }
+
+        .area-titulo:first-child {
+            margin-top: 0;
+        }
+
+        .grid-cursos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .curso-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px 24px;
+            width: calc(33% - 16px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #8B0000;
+        }
+
+        .curso-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+        }
+
+        .curso-card h3 {
+            font-size: 15px;
+            color: #0D0D0D;
+            margin-bottom: 6px;
+        }
+
+        .curso-card span {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-cursos {
+            background-color: #0D0D0D;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cta-cursos h2 {
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .cta-cursos a {
+            background: #8B0000;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .cta-cursos a:hover {
+            background: #a00000;
+        }
+
+        @media (max-width: 768px) {
+            .container-cursos {
+                padding: 40px 20px;
+            }
+
+            .curso-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-header">
+        <a class="header-logo" href="index.html">
+            <img src="assets/images/logofatecanos.png" alt="logo fatecanos">
+            <div class="header-texto">
+                <h1>FATECANOS</h1>
+                <p>Da comunidade para a comunidade</p>
+            </div>
+        </a>
+        <nav class="container-navegacao">
+            <a href="index.html">Inicio</a>
+            <a href="fatecanos.html">Fatecanos</a>
+            <a href="comunidade.html">Comunidade</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cursos.html" class="ativo">Cursos</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <main class="main-cursos">
+
+        <div class="hero-cursos">
+            <h1>Cursos da FATEC</h1>
+            <p>Conheça todos os cursos superiores de tecnologia oferecidos pelas unidades Fatec em todo o Estado de São Paulo.</p>
+        </div>
+
+        <div class="container-cursos">
+
+            <p class="area-titulo">💻 Tecnologia da Informação</p>
+            <div class="grid-cursos">
+                <div class="curso-card">
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Desenvolvimento de Software Multiplataforma</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Banco de Dados</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Redes de Computadores</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Segurança da Informação</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Ciência de Dados</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+            </div>
+
+            <p class="area-titulo">🏭 Gestão e Negócios</p>
+            <div class="grid-cursos">
+                <div class="curso-card">
+                    <h3>Gestão Empresarial</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Gestão de Recursos Humanos</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Logística</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Marketing</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Comércio Exterior</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+            </div>
+
+            <p class="area-titulo">⚙️ Engenharia e Produção</p>
+            <div class="grid-cursos">
+                <div class="curso-card">
+                    <h3>Fabricação Mecânica</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Manutenção de Aeronaves</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Automação Industrial</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Gestão da Produção Industrial</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Mecatrônica</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+            </div>
+
+            <p class="area-titulo">🎨 Design e Comunicação</p>
+            <div class="grid-cursos">
+                <div class="curso-card">
+                    <h3>Design Gráfico</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Design de Mídias Digitais</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Produção Multimídia</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Jogos Digitais</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+            </div>
+
+            <p class="area-titulo">🌱 Meio Ambiente e Agronegócio</p>
+            <div class="grid-cursos">
+                <div class="curso-card">
+                    <h3>Gestão Ambiental</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Agronegócio</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+                <div class="curso-card">
+                    <h3>Análise e Gestão Ambiental</h3>
+                    <span>2 anos e meio · Tecnólogo</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cta-cursos">
+            <h2>Quer saber mais sobre os cursos?</h2>
+            <a href="https://www.fatec.sp.gov.br" target="_blank">Acessar site oficial da FATEC</a>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        Fatecanos.com &copy; 2026 | &reg; Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

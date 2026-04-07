@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATECANOS - Comunidade</title>
+
+    <!-- Estilos da Página -->
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/comunidade.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logofatecanos.png" type="image/png">
+
+    <style>
+        .main-comunidade {
+            background-color: #fcfcfc;
+        }
+
+        /* HERO */
+        .hero-comunidade {
+            background-color: #0D0D0D;
+            padding: 70px 40px;
+            text-align: center;
+        }
+
+        .hero-comunidade h1 {
+            color: #ffffff;
+            font-size: 44px;
+            margin-bottom: 16px;
+        }
+
+        .hero-comunidade p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            max-width: 580px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+        .hero-comunidade a {
+            background: #8B0000;
+            color: white;
+            padding: 14px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .hero-comunidade a:hover {
+            background: #a00000;
+        }
+
+        /* BENEFÍCIOS */
+        .secao-beneficios {
+            padding: 70px 80px;
+            text-align: center;
+        }
+
+        .secao-beneficios h2 {
+            font-size: 32px;
+            color: #0D0D0D;
+            margin-bottom: 10px;
+        }
+
+        .secao-beneficios > p {
+            color: rgba(0, 0, 0, 0.55);
+            font-size: 15px;
+            margin-bottom: 48px;
+        }
+
+        .grid-beneficios {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .beneficio-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 32px 28px;
+            width: 260px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease;
+        }
+
+        .beneficio-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .beneficio-card .icone {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .beneficio-card h3 {
+            font-size: 17px;
+            color: #0D0D0D;
+            margin-bottom: 10px;
+        }
+
+        .beneficio-card p {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.55);
+            line-height: 1.6;
+        }
+
+        /* DISCORD */
+        .secao-discord {
+            background-color: #5865F2;
+            padding: 70px 40px;
+            text-align: center;
+        }
+
+        .secao-discord h2 {
+            color: #ffffff;
+            font-size: 34px;
+            margin-bottom: 14px;
+        }
+
+        .secao-discord p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            max-width: 520px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .secao-discord a {
+            background: #ffffff;
+            color: #5865F2;
+            padding: 14px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+
+        .secao-discord a:hover {
+            background: #e8e8e8;
+        }
+
+        /* REGRAS */
+        .secao-regras {
+            padding: 70px 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .secao-regras h2 {
+            font-size: 28px;
+            color: #0D0D0D;
+            margin-bottom: 8px;
+        }
+
+        .secao-regras > p {
+            color: rgba(0, 0, 0, 0.55);
+            margin-bottom: 36px;
+            font-size: 15px;
+        }
+
+        .regra-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .regra-numero {
+            background: #8B0000;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .regra-item h4 {
+            color: #0D0D0D;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .regra-item p {
+            color: rgba(0, 0, 0, 0.55);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .secao-beneficios,
+            .secao-regras {
+                padding: 50px 20px;
+            }
+
+            .beneficio-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-header">
+        <a class="header-logo" href="index.html">
+            <img src="assets/images/logofatecanos.png" alt="logo fatecanos">
+            <div class="header-texto">
+                <h1>FATECANOS</h1>
+                <p>Da comunidade para a comunidade</p>
+            </div>
+        </a>
+        <nav class="container-navegacao">
+            <a href="index.html">Inicio</a>
+            <a href="fatecanos.html">Fatecanos</a>
+            <a href="comunidade.html" class="ativo">Comunidade</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <main class="main-comunidade">
+
+        <!-- HERO -->
+        <div class="hero-comunidade">
+            <h1>Faça parte da Comunidade</h1>
+            <p>O Fatecanos é feito por alunos e para alunos. Aqui você encontra apoio, troca conhecimento e
+                cresce junto com outros estudantes de todas as unidades Fatec.</p>
+            <a href="https://discord.gg/ybd34wSAkk" target="_blank">Entrar no Discord</a>
+        </div>
+
+        <!-- BENEFÍCIOS -->
+        <div class="secao-beneficios">
+            <h2>Por que entrar na comunidade?</h2>
+            <p>Tudo que você precisa para aproveitar ao máximo sua jornada na Fatec.</p>
+
+            <div class="grid-beneficios">
+                <div class="beneficio-card">
+                    <div class="icone">🤝</div>
+                    <h3>Networking</h3>
+                    <p>Conecte-se com alunos de todas as 60+ unidades Fatec do Estado de São Paulo.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="icone">💡</div>
+                    <h3>Troca de Conhecimento</h3>
+                    <p>Tire dúvidas, compartilhe materiais e aprenda com colegas de outros cursos.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="icone">🚀</div>
+                    <h3>Projetos em Equipe</h3>
+                    <p>Encontre parceiros para desenvolver projetos e construir seu portfólio juntos.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="icone">📢</div>
+                    <h3>Oportunidades</h3>
+                    <p>Fique por dentro de vagas, hackathons, eventos e novidades do mundo da tecnologia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DISCORD -->
+        <div class="secao-discord">
+            <h2>Servidor no Discord</h2>
+            <p>Nossa comunidade vive no Discord. Canais organizados por curso, unidade e tema — tudo em um só lugar.</p>
+            <a href="https://discord.gg/ybd34wSAkk" target="_blank">Entrar agora</a>
+        </div>
+
+        <!-- REGRAS -->
+        <div class="secao-regras">
+            <h2>Regras da Comunidade</h2>
+            <p>Para manter o ambiente respeitoso e produtivo para todos.</p>
+
+            <div class="regra-item">
+                <div class="regra-numero">1</div>
+                <div>
+                    <h4>Respeito acima de tudo</h4>
+                    <p>Trate todos com respeito, independentemente de curso, unidade ou nível de conhecimento.</p>
+                </div>
+            </div>
+            <div class="regra-item">
+                <div class="regra-numero">2</div>
+                <div>
+                    <h4>Sem spam ou autopromoção excessiva</h4>
+                    <p>Divulgações são bem-vindas nos canais certos. Evite encher outros canais com propagandas.</p>
+                </div>
+            </div>
+            <div class="regra-item">
+                <div class="regra-numero">3</div>
+                <div>
+                    <h4>Compartilhe conhecimento</h4>
+                    <p>A comunidade cresce quando todos contribuem. Ajude quem está aprendendo.</p>
+                </div>
+            </div>
+            <div class="regra-item">
+                <div class="regra-numero">4</div>
+                <div>
+                    <h4>Use os canais corretos</h4>
+                    <p>Cada canal tem um propósito. Postar no canal certo ajuda a manter a organização.</p>
+                </div>
+            </div>
+            <div class="regra-item">
+                <div class="regra-numero">5</div>
+                <div>
+                    <h4>Seja ético</h4>
+                    <p>Não compartilhe conteúdo que infrinja direitos autorais ou que seja ilegal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA FINAL -->
+        <section class="container-principal-fatecanos" style="padding: 60px 20px;">
+            <h1>Pronto para fazer parte?</h1>
+            <div class="botoes-principal-fatecanos" style="margin-top: 20px;">
+                <a href="https://discord.gg/ybd34wSAkk" target="_blank">Entrar na comunidade</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        Fatecanos.com &copy; 2026 | &reg; Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

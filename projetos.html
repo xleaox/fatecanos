@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATECANOS - Projetos</title>
+
+    <!-- Estilos da Página -->
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="assets/css/comunidade.css">
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/projetos.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logofatecanos.png" type="image/png">
+
+    <style>
+         /*Tive que improvisar aqui também, porém posteriormente vou ajeitar isso aqui...*/
+        .hero-projetos {
+            background-color: #0D0D0D;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .hero-projetos h1 {
+            color: #ffffff;
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .hero-projetos p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .submeta-projetos {
+            background-color: #8B0000;
+            text-align: center;
+            padding: 20px 40px;
+        }
+
+        .submeta-projetos p {
+            color: rgba(255,255,255,0.85);
+            font-size: 14px;
+        }
+
+        .submeta-projetos a {
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #555;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin: 4px 2px 0;
+        }
+
+        .projetos-tags {
+            padding: 6px 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-header">
+        <a class="header-logo" href="index.html">
+            <img src="assets/images/logofatecanos.png" alt="logo fatecanos">
+            <div class="header-texto">
+                <h1>FATECANOS</h1>
+                <p>Da comunidade para a comunidade</p>
+            </div>
+        </a>
+        <nav class="container-navegacao">
+            <a href="index.html">Inicio</a>
+            <a href="fatecanos.html">Fatecanos</a>
+            <a href="comunidade.html">Comunidade</a>
+            <a href="projetos.html" class="ativo">Projetos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="sobre.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <main class="main-projetos">
+
+        <div class="hero-projetos">
+            <h1>Projetos dos Fatecanos</h1>
+            <p>Conheça os projetos desenvolvidos por alunos Fatec. Criatividade, técnica e dedicação em cada entrega.</p>
+        </div>
+
+        <div class="submeta-projetos">
+            <p>Tem um projeto para divulgar? <a href="comunidade.html">Entre na comunidade</a> e envie o seu!</p>
+        </div>
+
+        <article class="container-projetos">
+
+            <!-- PROJETO 1 -->
+            <div class="projetos">
+                <img src="assets/images/rickanmorty.jpg" alt="Rick and Morty">
+                <div>
+                    <h2>Rick And Morty Fan Site</h2>
+                    <div class="projetos-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <p>Um projeto criativo inspirado no universo de Rick and Morty, desenvolvido com foco em prática e
+                        evolução no desenvolvimento web. O site conta com uso de HTML, CSS e JavaScript, trazendo uma
+                        interface interativa com imagens animadas e elementos visuais que remetem ao estilo único da série.
+                        Além do visual chamativo, o projeto demonstra domínio em estruturação de páginas, estilização e
+                        manipulação dinâmica de elementos.</p>
+                    <p>Desenvolvido por: <a href="https://github.com/codeByThiago" target="_blank">Thiago</a> &amp; <a href="https://github.com/isabellasakamoto"
+                            target="_blank">Isabella</a></p>
+                    <div class="botoes-projetos">
+                        <a href="https://codebythiago.github.io/rickmortyexample/index.html" target="_blank">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJETO 2 -->
+            <div class="projetos">
+                <img src="assets/images/logofatecanos.png" alt="Fatecanos">
+                <div>
+                    <h2>Fatecanos</h2>
+                    <div class="projetos-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Comunidade</span>
+                    </div>
+                    <p>O próprio site que você está navegando agora! O Fatecanos é uma plataforma de networking
+                        desenvolvida por alunos Fatec com o objetivo de conectar estudantes de todas as unidades do
+                        Estado de São Paulo. O projeto reúne boas práticas de desenvolvimento front-end, design responsivo
+                        e foco na experiência do usuário.</p>
+                    <p>Desenvolvido pela <a href="comunidade.html">comunidade Fatecanos</a></p>
+                    <div class="botoes-projetos">
+                        <a href="fatecanos.html">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+
+          
+
+        </article>
+
+        <!-- CTA -->
+        <section class="container-principal-fatecanos" style="padding: 60px 20px;">
+            <h1>Quer divulgar o seu projeto?</h1>
+            <div class="botoes-principal-fatecanos" style="margin-top: 20px;">
+                <a href="comunidade.html">Entrar na comunidade</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        Fatecanos.com &copy; 2026 | &reg; Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

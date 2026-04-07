@@ -1,0 +1,180 @@
+/* ========================= */
+/*       CSS COMUNIDADE      */
+/* ========================= */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --font-default: Arial, Helvetica, sans-serif;
+    --cor-1: #0f0000;
+    --background: radial-gradient(circle at 50% 20%, #ffffff, #ffffff 70%);
+    /* :root é onde ficam as variáveis globais do site — valores que você reutiliza em vários lugares */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* o * seleciona TODOS os elementos — isso zera as margens e paddings padrão do navegador */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-1);
+    background-color: var(--cor-1);
+    /* var(--cor-1) usa a variável que definimos lá no :root */
+}
+
+/*
+.main-comunidade {
+    background: radial-gradient(circle at 50% 20%, #000000, #5e0000 70%);;
+    
+}
+.container-comunidade1 {
+    padding: 60px 20px;
+      display: flex;
+    gap: 30px;  
+      align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container-comunidade1 p{
+    padding: 10px;
+  
+
+}
+.btn-comunidade {
+    align-items: center;
+    justify-content: center;
+}
+.btn-comunidade a{
+    background-color: #eeeeee;
+    color: #960000;
+    text-decoration: none;
+    padding: 12px 120px;
+    display: inline-block;
+    border-radius: 8px;
+    
+}
+
+.btn-comunidade a:hover {
+    background-color: #5e0000;
+    color: white;
+    transition: ease 0.5s;
+    transform: scale(1.3);
+}
+*/
+/* PARTE DA FAIXA */
+
+.strip {
+    background: #9B1C1C;
+    padding: 10px 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.strip-inner {
+    display: inline-flex;
+    gap: 3rem;
+    animation: scroll 10s linear infinite;
+}
+
+.strip span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+}
+
+.strip span.sep {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.container-cards {
+    display: flex;
+    background-color: #ebebeb;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    font-family: "Arial";
+    gap: 48px;
+}
+
+.card {
+    background-color: rgb(0, 0, 0);
+    width: 210px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px #ffffffaa;
+
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    height: 50%;
+}
+
+.card span {
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.card h2 {
+    font-size: .9rem;
+    color: #5e0000;
+    padding: 2px;
+    text-align: center;
+
+}
+
+.card a {
+    display: inline-block;
+    /* inline-block permite definir padding mas fica na mesma linha */
+    margin-top: 24px;
+    padding: 12px 28px;
+    background: #8B0000;
+    color: rgba(255, 255, 255, 0.685);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    /* transition suaviza a mudança de cor no hover */
+}
+
+.card a:hover {
+    background-color: #ffffff;
+    color: rgb(57, 0, 0);
+    transition: ease 0.5s;
+    transform: scale(1.2);
+}
+
+.card:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #000000aa;
+}
