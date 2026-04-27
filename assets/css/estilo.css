@@ -4,26 +4,23 @@
 
 :root {
     --font-default: Arial, Helvetica, sans-serif;
-    /* :root é onde ficam as variáveis globais do site — valores que você reutiliza em vários lugares */
+  
 }
 
 * {
     margin: 0;
     padding: 0;
-    /* o * seleciona TODOS os elementos — isso zera as margens e paddings padrão do navegador */
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     
-    /* var(--cor-1) usa a variável que definimos lá no :root */
 }
 
 @media (max-width: 768px) {}
 
 .main {
     min-height: auto;
-    /* vh = viewport height — 85vh significa 85% da altura da tela visível */
     background-color: #fcfcfc;
 }
 
@@ -56,7 +53,6 @@ body {
 .stat {
     display: flex;
     flex-direction: column; 
-    /* empilha o numero e a label verticalmente q ta dentro do stat*/
     gap: 4px;
 }
 .stat-numero {
@@ -70,29 +66,21 @@ body {
 }
 .artigo {
     display: flex;
-    /* ativa o flexbox — coloca os filhos lado a lado */
     align-items: center;
-    /* centraliza texto e imagem verticalmente */
     gap: 40px;
-    /* espaço entre o texto e a imagem */
     padding: 60px 80px;
-    /* 60px cima/baixo, 80px nas laterais para respirar */
     
     min-height: 500px;
-    /* altura mínima para a seção não ficar achatada */
 }
 
 .artigo-texto {
     flex: 1;
-    /* ocupa metade do espaç divide igualmente com a imagem */
     color: #6f0000;
 }
 
 .artigo-texto h1 {
     font-size: 56px;
-    /* título grande e impactante */
     line-height: 1.3;
-    /* espaço entre as linhas do título */
     margin-bottom: 16px;
     color: #000000;
 }
@@ -100,7 +88,6 @@ body {
 .artigo-texto p {
     font-size: 15px;
     line-height: 1.7;
-    /* line-height = espaço entre as linhas — 1.7 deixa o texto mais legível */
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -119,23 +106,18 @@ body {
 
 .botao-artigo:hover {
     background: #ff0000;
-    /* cor mais clara ao passar o mouse */
 }
 
 .artigo-imagem {
     flex: 1;
-    /* ocupa a outra metade do espaço */
     max-width: 650px;
-    /* não deixa a imagem ficar maior que 450px */
 }
 
 .artigo-imagem img {
     width: 100%;
     /* ocupa toda a largura da div pai */
     border-radius: 12px;
-    /* bordas arredondadas na imagem */
     object-fit: cover;
-    /* preenche o espaço sem distorcer a imagem */
     border-color: #8B0000;
     border-style: solid;
 }
@@ -183,8 +165,7 @@ body {
     width: 25%;
     position: relative;
     flex-shrink: 0;
-    /* impede o slide de encolher — esse era o problema do corte */
-    transition: 0.6s ease-in-out; /* ADICIONE ESTA LINHA: define a suavidade e o tempo */
+    transition: 0.6s ease-in-out; 
 }
 
 .slide img {
@@ -192,7 +173,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    margin-left: 0; /* garante que a imagem começa do zero */
+    margin-left: 0; 
 }
 
 .manual-navigation {
@@ -325,10 +306,16 @@ body {
 .container-principal-fatecanos {
     text-align: center;
 }
+.container-principal-fatecanos h1{
+    padding: 20px;
+}
+.container-principal-fatecanos a{
+    padding: 20px;
+}
 
 .botao-fatecanos a{
     background-color: #5e0000;
-    padding: 15px 25px;
+    padding: 25px 25px;
     border-radius: 9px;
     text-decoration: none;
     display: inline-block;
@@ -345,6 +332,7 @@ body {
     display: inline-block;
     text-shadow: #000000;
     text-align: center;
+    padding: 20px;
     
 }
 .botoes-principal-fatecanos {

@@ -42,6 +42,57 @@
 .container-projeto p{
     color: #8B0000;
 }
+         /*Tive que improvisar aqui também, porém posteriormente vou ajeitar isso aqui...*/
+        .hero-projetos {
+            background-color: #0D0D0D;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .hero-projetos h1 {
+            color: #ffffff;
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .hero-projetos p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .submeta-projetos {
+            background-color: #8B0000;
+            text-align: center;
+            padding: 20px 40px;
+        }
+
+        .submeta-projetos p {
+            color: rgba(255,255,255,0.85);
+            font-size: 14px;
+        }
+
+        .submeta-projetos a {
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #555;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin: 4px 2px 0;
+        }
+
+        .projetos-tags {
+            padding: 6px 0 10px;
+        }
 
 @media (max-width: 768px) {
     .projetos {
@@ -49,6 +100,6 @@
     }
 
     .projetos img {
-        width: 100%; /* imagem ocupa a largura toda */
+        width: 100%; 
     }
 }

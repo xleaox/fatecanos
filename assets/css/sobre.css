@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}     
+        .main-oculto {      /*Isso aqui era outra coisa, porém estrapolei no tempo, então tive que improvisar*/
+            background-color: #0D0D0D;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 60px 40px;
+        }
+
+        .main-oculto h1 {
+            color: #ffffff;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .main-oculto p {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 16px;
+            max-width: 500px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .main-oculto a {
+            background: #8B0000;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .main-oculto a:hover {
+            background: #a00000;
+        }
+
+        .badge-breve {
+            display: inline-block;
+            background: #8B0000;
+            color: white;
+            font-size: 12px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
